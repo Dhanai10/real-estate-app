@@ -19,10 +19,8 @@ export default function AdminPanel({ refresh }) {
     form.append("file", file);
     form.append("upload_preset", process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET);
 
-    const res = await axios.post(
-      "https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}/image/upload",
-      form
-    );
+    const cloudUrl = `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}/image/upload`;
+    const res = await axios.post(cloudUrl, form);
 
     const { data, error } = await supabase.from("tbl_Properties").insert([
       {
