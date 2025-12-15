@@ -17,10 +17,10 @@ export default function AdminPanel({ refresh }) {
 
     const form = new FormData();
     form.append("file", file);
-    form.append("upload_preset", "real_estate_upload");
+    form.append("upload_preset", process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET);
 
     const res = await axios.post(
-      "https://api.cloudinary.com/v1_1/dwgfwjhua/image/upload",
+      "https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}/image/upload",
       form
     );
 
