@@ -57,7 +57,7 @@ const heroStyle = {
 
     <div className="container mt-4">
      {properties.length > 0 && (
-        <h2 className="fw-bold">Featured Properties</h2>
+        <h2 className="menu-color">Most Popular</h2>
       )}
       <PropertyList properties={properties} />
     </div>

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/realestateLogo-Trans.png";
+import "../assets/css/Navbar.css";
 
 function Navbar() {
   return (
@@ -9,10 +10,15 @@ function Navbar() {
   <img
     src={logo}
     alt="Real Estate Logo"
-    height="40"
+    height="80"
     className="me-2"
   />
-  <span className="fw-bold">Real Estate</span>
+  <div className="company-logo">
+  <div>
+    <span className="highlight">A</span>SHOKRAJ
+  </div>
+  <div className="sub-name"><span className="highlight">R</span>EALS</div>
+</div>
 </Link>
 
         <button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
@@ -22,13 +28,13 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="menu">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link className="nav-link" to="/">Home</Link>
+              <Link className="nav-link menu-color" to="/">HOME</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contact">Contact</Link>
+              <Link className="nav-link menu-color" to="/contact">CONTACT</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/admin">Admin</Link>
+              <Link className="nav-link menu-color" to="/admin">ADMIN</Link>
             </li>
           </ul>
         </div>

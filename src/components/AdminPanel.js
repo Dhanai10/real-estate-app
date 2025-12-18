@@ -63,116 +63,59 @@ function AdminPanel({ onRefresh }) {
   };
 
   return (
-    <div className="card p-4 shadow">
-      <h5 className="mb-3">Add New Property</h5>
+     <div className="login-page-light">
+      <div className="login-card-light big-card">
+        <h3 className="login-logo">Add New Property</h3>
 
-      <input
-        className="form-control mb-2"
-        placeholder="Property Title"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-      />
+        {/* Property Title */}
+        <div className="form-group">
+         <input
+          className="input-field-light"
+          placeholder="Property Title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
+        </div>
+       
 
-      <input
-        className="form-control mb-2"
-        placeholder="Price"
-        value={price}
-        onChange={(e) => setPrice(e.target.value)}
-      />
+        {/* Price */}
+         <div className="form-group">
+        <input
+          className="input-field-light"
+          placeholder="Price"
+          value={price}
+          onChange={(e) => setPrice(e.target.value)}
+        /></div>
 
-      <input
-        className="form-control mb-3"
-        placeholder="Size (sqft)"
-        value={size}
-        onChange={(e) => setSize(e.target.value)}
-      />
+        {/* Size */}
+         <div className="form-group">
+        <input
+          className="input-field-light"
+          placeholder="Size (sq.ft)"
+          value={size}
+          onChange={(e) => setSize(e.target.value)}
+        /></div>
 
-      <input
+        {/* Image */}
+         <div className="form-group">
+
+        <input
         type="file"
-        className="form-control mb-3"
+        className="input-field-light"
         accept="image/*"
         ref={fileInputRef}
         onChange={(e) => setFile(e.target.files[0])}
-      />
+      /></div>
 
-      <button
-        className="btn btn-success"
-        onClick={uploadAndSave}
-        disabled={loading}
-      >
-        {loading ? "Uploading..." : "Save Property"}
-      </button>
+        {/* Add Button */}
+         <div className="form-group">
+        <button className="btn-login-light" onClick={uploadAndSave} disabled={loading}>
+            {loading ? "Uploading..." : "Save Property"}
+        </button>
+        </div>
+      </div>
     </div>
   );
 }
 
 export default AdminPanel;
-
-// import { useState } from "react";
-// import axios from "axios";
-// import { supabase } from "../services/supabase";
-
-// export default function AdminPanel({ refresh }) {
-//   const [title, setTitle] = useState("");
-//   const [price, setPrice] = useState("");
-//   const [size, setSize] = useState("");
-//   const [file, setFile] = useState(null);
-
-//   const uploadAndSave = async () => {
-//     if (!file) {
-//       console.log("File is null:", file); 
-//       return alert("Select image");
-//     }
-//     console.log("Uploading file:", file);
-
-//     const form = new FormData();
-//     form.append("file", file);
-//     form.append("upload_preset", process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET);
-
-//     const cloudUrl = `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}/image/upload`;
-//     const res = await axios.post(cloudUrl, form);
-
-//     const { data, error } = await supabase.from("tbl_Properties").insert([
-//       {
-//         title,
-//         price,
-//         size,
-//         imageURL: res.data.secure_url,
-//       },
-//     ]);
-//     if (error) {
-//   console.error("Supabase insert error:", error);
-//   alert("Database insert failed! Check console.");
-// } else {
-//   console.log("Inserted row:", data);
-//   alert("Property added successfully");
-// }
-
-//     setTitle(""); setPrice(""); setSize(""); setFile(null);
-//     refresh();
-//   };
-
-//   return (
-//     <div className="container mt-4">
-//       <h4>Add Property</h4>
-//       <input className="form-control mb-2" placeholder="Title" onChange={e => setTitle(e.target.value)} />
-//       <input className="form-control mb-2" placeholder="Price" onChange={e => setPrice(e.target.value)} />
-//       <input className="form-control mb-2" placeholder="Size" onChange={e => setSize(e.target.value)} />
-//     <input
-//   type="file"
-//   className="form-control mb-3"
-//   accept="image/*"
-//   onChange={(e) => {
-//     if (e.target.files && e.target.files.length > 0) {
-//       console.log("Selected file:", e.target.files[0]);
-//       setFile(e.target.files[0]);
-//     } else {
-//       console.log("No file selected");
-//     }
-//   }}
-// />
-
-//       <button className="btn btn-success" onClick={uploadAndSave}>Save Property</button>
-//     </div>
-//   );
-// }

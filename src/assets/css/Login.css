@@ -1,0 +1,67 @@
+/* Full page light background */
+.login-page-light {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa; /* light grey/white */
+  font-family: Arial, sans-serif;
+}
+
+/* Card styling */
+.login-card-light {
+  max-width: 400px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  background-color: #fff; /* white card */
+  text-align: center;
+}
+
+/* Brand Logo */
+.login-logo {
+  font-family: 'Orbitron', sans-serif;
+  color: #0B6B3A; /* green accent */
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.login-logo .highlight {
+  color: #046A38; /* darker green */
+}
+
+/* Inputs */
+.input-field-light {
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+}
+
+.input-field-light::placeholder {
+  color: #999; /* grey placeholder */
+}
+
+/* Login Button */
+.btn-login-light {
+  width: 100%;
+  background-color: #0B6B3A; /* green accent */
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 10px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-login-light:hover {
+  background-color: #046A38;
+}
+
+.big-card {
+  max-width: 600px; /* bigger width */
+  padding: 40px; /* more padding for comfort */
+}

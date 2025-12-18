@@ -1,0 +1,65 @@
+.contact-card.light {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  color: #222;
+}
+
+.contact-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #111;
+}
+
+.contact-item {
+  margin-bottom: 18px;
+}
+
+.contact-label {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #0b6b3a; /* dark green accent */
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+.contact-item p {
+  font-size: 16px;
+  margin: 0;
+  color: #333;
+}
+.contact-icon {
+  font-size: 16px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.whatsapp {
+  color: #25d366;
+}
+
+.phone {
+  color: #0b6b3a; /* your dark green brand color */
+}
+
+.contact-link {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-link:hover {
+  color: #0b6b3a;
+  text-decoration: underline;
+}
+.mail-icon {
+  color: #1ee80b;        /* white icon */
+  font-size: 20px;
+}
+

@@ -1,0 +1,24 @@
+.company-logo {
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  text-align: left;
+  line-height: 1.1;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 6px;
+}
+
+.highlight {
+  font-size: 46px;              /* Bigger A & R */
+  font-weight: 900;
+  color: #0b6b3a;               /* Dark green */
+}
+
+.sub-name {
+  margin-top: 4px;
+}
+.nav-link.menu-color{
+  font-family: 'Arial';
+  color:white;
+  font-weight: 500;
+}
