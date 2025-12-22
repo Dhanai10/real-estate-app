@@ -1,5 +1,7 @@
 import React from 'react';
-import '../assets/css/Contact.css'
+import '../assets/css/Contact.css';
+import { Link } from "react-router-dom";
+
 
 
 function Footer() {
@@ -25,11 +27,23 @@ function Footer() {
         <h6 className="fw-bold" style={{ color: '#E5E7EB' }}>Quick Links</h6>
         <ul className="list-unstyled">
           <li>
+  <Link to="/" className="text-decoration-none" style={{ color: '#9CA3AF' }}>
+    Home
+  </Link>
+</li>
+<li>
+  <Link to="/contact" className="text-decoration-none" style={{ color: '#9CA3AF' }}>
+    Contact
+  </Link>
+</li>
+
+          {/* <li>
+            
             <a href="/" className="text-decoration-none" style={{ color: '#9CA3AF' }}>Home</a>
           </li>
           <li>
             <a href="/contact" className="text-decoration-none" style={{ color: '#9CA3AF' }}>Contact</a>
-          </li>
+          </li> */}
         </ul>
       </div>
 

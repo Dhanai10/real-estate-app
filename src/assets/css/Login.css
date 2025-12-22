@@ -25,6 +25,8 @@
   color: #0B6B3A; /* green accent */
   font-weight: 700;
   margin-bottom: 25px;
+  white-space: normal;   /* allow wrap */
+  text-align: center;
 }
 
 .login-logo .highlight {
@@ -64,4 +66,32 @@
 .big-card {
   max-width: 600px; /* bigger width */
   padding: 40px; /* more padding for comfort */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 576px) {
+  .login-card-light,
+  .login-card-dark,
+  .big-card {
+    max-width: 95%;
+    padding: 20px;
+  }
+
+  .login-logo {
+    font-size: 20px;   /* reduce logo size */
+    line-height: 1.2;
+    word-break: break-word;
+  }
+
+  .input-field-light,
+  .input-field-dark {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .btn-login-light,
+  .btn-login-dark {
+    padding: 8px;
+    font-size: 14px;
+  }
 }
