@@ -83,15 +83,26 @@
     word-break: break-word;
   }
 
-  .input-field-light,
-  .input-field-dark {
-    font-size: 14px;
-    padding: 8px;
-  }
+.input-field-light,
+select.input-field-light,
+input[type="file"].input-field-light {
+  width: 50%;
+  height: 45px;
+  font-size: 16px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
 
   .btn-login-light,
   .btn-login-dark {
     padding: 8px;
     font-size: 14px;
   }
+}
+
+.property-form .form-group {
+  display: flex;
+  flex-direction: column; /* stack label/input if any */
+  gap: 8px; 
 }

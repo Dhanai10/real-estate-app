@@ -1,0 +1,33 @@
+
+.floating-contact {
+  position: fixed;
+  bottom: 20px;       /* distance from bottom */
+  right: 20px;        /* distance from right */
+  z-index: 1000;      /* above everything */
+  background-color: #007bff;  /* bootstrap primary color */
+  color: white;
+  border-radius: 50%; /* circle button */
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.floating-contact:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 576px) {
+  .floating-contact {
+    bottom: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}

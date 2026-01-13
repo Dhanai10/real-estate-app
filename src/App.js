@@ -7,8 +7,11 @@ import Contact from "./pages/Contact";
 import AdminLogin from "./pages/AdminLogin";
 import AdminPanel from "./components/AdminPanel";
 import Footer from "./pages/Footer";
+import FloatingContact from "./components/FloatingContact";
+import "../src/assets/css/App.css";
 
 function App() {
+  
   return (
     <BrowserRouter>
       <Navbar />
@@ -22,51 +25,9 @@ function App() {
 
       <ToastContainer position="top-right" autoClose={3000} />
       <Footer/>
+      <FloatingContact/>
     </BrowserRouter>
   );
 }
 
 export default App;
-
-
-
-
-
-// // import { useEffect, useState } from "react";
-// // import AdminLogin from "./components/AdminLogin";
-// // import AdminPanel from "./components/AdminPanel";
-// // import PropertyList from "./components/PropertyList";
-// // import { supabase } from "./services/supabase";
-
-
-// export default function App() {
-//   const [isAdmin, setIsAdmin] = useState(false);
-//   const [properties, setProperties] = useState([]);
-
-//   const fetchProperties = async () => {
-//     const { data } = await supabase
-//       .from("tbl_Properties")
-//       .select("*")
-//       .order("created_at", { ascending: false });
-
-//     setProperties(data || []);
-//   };
-
-//   useEffect(() => {
-//     fetchProperties();
-//   }, []);
-
-//   return (
-//     <>
-//       <nav className="navbar navbar-dark bg-dark">
-//         <span className="navbar-brand ms-3">🏠 Real Estate</span>
-//       </nav>
-
-//       {!isAdmin && <AdminLogin onLogin={setIsAdmin} />}
-
-//       {isAdmin && <AdminPanel refresh={fetchProperties} />}
-
-//       <PropertyList properties={properties} />
-//     </>
-//   );
-// }
