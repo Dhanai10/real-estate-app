@@ -90,95 +90,102 @@ function AdminPanel({ onRefresh }) {
   };
 
   return (
-    <div className="login-page-light">
-      <div className="login-card-light big-card">
-        <h3 className="login-logo">Add New Property</h3>
+    <div className="container py-4">
+      <div className="row justify-content-center">
+        <div className="col-12 col-sm-10 col-md-6 col-lg-5">
+          <div className="login-page-light">
+            <div className="login-card-light big-card">
+              <h3 className="login-logo text-center">Add New Property</h3>
 
-        <form className="property-form">
-          {/* Property Type */}
-          <div className="form-group">
-            <select
-              className="input-field-light"
-              value={selectedPT}
-              onChange={(e) => setSelectedPT(e.target.value)}
-            >
-              <option value="">Select Property Type</option>
-              {PTList.map((pt) => (
-                <option key={pt.id} value={pt.id}>
-                  {pt.Type}
-                </option>
-              ))}
-            </select>
+              <form className="property-form">
+                {/* Property Type */}
+                <div className="form-group">
+                  <select
+                    className="input-field-light"
+                    value={selectedPT}
+                    onChange={(e) => setSelectedPT(e.target.value)}
+                  >
+                    <option value="">Select Property Type</option>
+                    {PTList.map((pt) => (
+                      <option key={pt.id} value={pt.id}>
+                        {pt.Type}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+
+                {/* Property Title */}
+                <div className="form-group">
+                  <input
+                    className="input-field-light"
+                    placeholder="Property Title"
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
+                  />
+                </div>
+
+
+                {/* Price */}
+                <div className="form-group">
+                  <input
+                    className="input-field-light"
+                    placeholder="Price"
+                    value={price}
+                    onChange={(e) => setPrice(e.target.value)}
+                  /></div>
+
+                {/* Size */}
+                <div className="form-group">
+                  <input
+                    className="input-field-light"
+                    placeholder="Size (sq.ft)"
+                    value={size}
+                    onChange={(e) => setSize(e.target.value)}
+                  /></div>
+
+                {/* Location */}
+                <div className="form-group">
+                  <input
+                    className="input-field-light"
+                    placeholder="Location/Area"
+                    value={location}
+                    onChange={(e) => setLocation(e.target.value)}
+                  /></div>
+
+                {/* City */}
+                <div className="form-group">
+                  <input
+                    className="input-field-light"
+                    placeholder="City"
+                    value={city}
+                    onChange={(e) => setCity(e.target.value)}
+                  /></div>
+
+                {/* Image */}
+                <div className="form-group">
+
+                  <input
+                    type="file"
+                    className="input-field-light"
+                    accept="image/*"
+                    ref={fileInputRef}
+                    onChange={(e) => setFile(e.target.files[0])}
+                  /></div>
+
+                {/* Add Button */}
+                <div className="form-group">
+                  <button className="btn-login-light" onClick={uploadAndSave} disabled={loading}>
+                    {loading ? "Uploading..." : "Save Property"}
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
-
-
-          {/* Property Title */}
-          <div className="form-group">
-            <input
-              className="input-field-light"
-              placeholder="Property Title"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-            />
-          </div>
-
-
-          {/* Price */}
-          <div className="form-group">
-            <input
-              className="input-field-light"
-              placeholder="Price"
-              value={price}
-              onChange={(e) => setPrice(e.target.value)}
-            /></div>
-
-          {/* Size */}
-          <div className="form-group">
-            <input
-              className="input-field-light"
-              placeholder="Size (sq.ft)"
-              value={size}
-              onChange={(e) => setSize(e.target.value)}
-            /></div>
-
-          {/* Location */}
-          <div className="form-group">
-            <input
-              className="input-field-light"
-              placeholder="Location/Area"
-              value={location}
-              onChange={(e) => setLocation(e.target.value)}
-            /></div>
-
-          {/* City */}
-          <div className="form-group">
-            <input
-              className="input-field-light"
-              placeholder="City"
-              value={city}
-              onChange={(e) => setCity(e.target.value)}
-            /></div>
-
-          {/* Image */}
-          <div className="form-group">
-
-            <input
-              type="file"
-              className="input-field-light"
-              accept="image/*"
-              ref={fileInputRef}
-              onChange={(e) => setFile(e.target.files[0])}
-            /></div>
-
-          {/* Add Button */}
-          <div className="form-group">
-            <button className="btn-login-light" onClick={uploadAndSave} disabled={loading}>
-              {loading ? "Uploading..." : "Save Property"}
-            </button>
-          </div>
-        </form>
+        </div>
       </div>
     </div>
+
   );
 }
 

@@ -1,18 +1,120 @@
+/* NAVBAR */
+.real-navbar {
+  min-height: 90px;
+  padding: 10px 0;
+}
+
+/* BRAND WRAP */
+.brand-wrap {
+  gap: 8px;
+}
+
+/* LOGO IMAGE */
+.logo-img {
+  height: 65px;
+  width: auto;
+}
+
+/* BRAND TEXT */
 .company-logo {
   font-family: 'Orbitron', sans-serif;
   color: white;
-  text-align: left;
-  line-height: 1.1;
-  font-size: 32px;
+  line-height: 1.05;
+  font-size: 28px;
   font-weight: 700;
-  letter-spacing: 6px;
+  letter-spacing: 4px;
+}
+
+.logo-line {
+  white-space: nowrap;   /* prevents missing J */
+}
+
+/* GREEN LETTER */
+.highlight {
+  font-size: 40px;
+  font-weight: 900;
+  color: #0b6b3a;
+}
+
+.sub-name {
+  margin-top: 2px;
+}
+
+/* MENU */
+.menu-color {
+  color: white !important;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* BURGER CLEAN */
+.custom-toggler {
+  border: none;
+}
+
+.custom-toggler:focus {
+  box-shadow: none;
+}
+
+/* MOBILE CENTERED BRAND */
+@media (max-width: 768px) {
+  .brand-wrap {
+    align-items: center;
+  }
+
+  .company-logo {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+
+  .highlight {
+    font-size: 28px;
+  }
+
+  .logo-img {
+    height: 50px;
+  }
+
+  .navbar-nav {
+    padding-top: 8px;
+    text-align: left;
+  }
+}
+/* Keep menu right aligned */
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+/* Menu items alignment */
+.navbar-nav {
+  text-align: left;
+}
+
+
+
+/* .company-logo {
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  text-align: left;
+  line-height: 1.05;
+  font-size: 30px;          
+  font-weight: 700;
+  letter-spacing: 4px;     
+  white-space: nowrap;    
+  margin-left: 6px;       
+} 
+
+.company-logo div {
+  display: block;
+  white-space: nowrap;     
 }
 
 .highlight {
-  font-size: 46px;              /* Bigger A & R */
+  font-size: 42px;
   font-weight: 900;
-  color: #0b6b3a;               /* Dark green */
+  color: #0b6b3a;
 }
+
 
 .sub-name {
   margin-top: 4px;
@@ -22,3 +124,48 @@
   color:white;
   font-weight: 500;
 }
+.navbar {
+  min-height: 100px;   
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+.logo-img {
+  height: 70px;
+  width: auto;
+}
+.navbar-brand {
+  align-items: flex-start !important;
+}
+.navbar-toggler {
+  border: none !important;
+  padding: 6px;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    align-items: center !important;
+  }
+
+  .company-logo {
+    font-size: 22px;
+    letter-spacing: 3px;
+  }
+
+  .highlight {
+    font-size: 30px;
+  }
+
+  .logo-img {
+    height: 55px;
+  }
+}
+*/

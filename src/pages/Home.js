@@ -39,17 +39,19 @@ function Home() {
     ), url('https://images.unsplash.com/photo-1568605114967-8130f3a36994')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    minHeight: '350px',
+    minHeight: '60vh',
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
+    padding: '20px'
+    
   };
   return (
     <>
       {/* HERO SECTION */}
       <div style={heroStyle}>
-        <div className="container text-white">
-          <h1 className="fw-bold">Find Your Dream Property</h1>
-          <p className="fs-5 mt-3 col-md-8">
+        <div className="container text-white ">
+          <h1 className="fw-bold display-6 display-md-4">Find Your Dream Property</h1>
+          <p className="mt-3 fs-6 fs-md-5 col-12 col-md-8">
             Discover homes, apartments, and commercial properties designed
             for modern living and smart investments.
           </p>

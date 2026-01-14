@@ -74,7 +74,7 @@
   .login-card-dark,
   .big-card {
     max-width: 95%;
-    padding: 20px;
+    padding: 16px;
   }
 
   .login-logo {
@@ -105,4 +105,15 @@ input[type="file"].input-field-light {
   display: flex;
   flex-direction: column; /* stack label/input if any */
   gap: 8px; 
+}
+@media (max-width: 576px) {
+  .input-field-light,
+  select.input-field-light,
+  input[type="file"].input-field-light {
+    width: 100%;   /* ✅ FIXED */
+    height: 45px;
+    font-size: 16px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
 }
