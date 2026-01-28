@@ -32,6 +32,7 @@ function Home() {
   // );
   // }
 
+  
   const heroStyle = {
     backgroundImage: `linear-gradient(
       rgba(0,0,0,0.6),
